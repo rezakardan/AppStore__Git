@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/mobileProductTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/_10font_mdp"
+        android:text="@string/mobile"
+android:textColor="@color/eerieBlack"
+        app:fontPath="fonts/atlas_bold.ttf" />
+
+
+    <TextView
+        android:id="@+id/mobileProductsShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:gravity="center_vertical"
+        android:text="@string/showAll"
+        android:textColor="@color/royalBlue"
+        android:textSize="@dimen/_9font_mdp"
+        app:drawableStartCompat="@drawable/chevron_left_mini"
+        app:drawableTint="@color/royalBlue"
+        />
+    
+    
+    
+    <com.todkars.shimmer.ShimmerRecyclerView
+        android:id="@+id/mobileRecycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobileProductsShowAll"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:layout_marginBottom="@dimen/_5mdp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_11mdp"
+        app:shimmer_recycler_auto_start="true"
+        app:shimmer_recycler_item_count="1"
+        app:shimmer_recycler_layout="@layout/item_products_shimmer"
+        app:shimmer_recycler_shape="linear"
+
+
+
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

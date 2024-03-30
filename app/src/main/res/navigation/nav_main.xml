@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.appstore.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash"/>
+
+    <action
+        android:id="@+id/action_splashFragment_to_navLogin"
+        app:destination="@id/navLogin"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+    <navigation
+        android:id="@+id/navLogin"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.example.appstore.ui.login.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" >
+            <action
+                android:id="@+id/action_loginFragment_to_verifyFragment"
+                app:destination="@id/verifyFragment"
+                app:enterAnim="@anim/from_left"
+                app:exitAnim="@anim/to_right"
+                app:popEnterAnim="@anim/from_right"
+                app:popExitAnim="@anim/to_left" />
+        </fragment>
+        <fragment
+            android:id="@+id/verifyFragment"
+            android:name="com.example.appstore.ui.login.VerifyFragment"
+            android:label="fragment_verify"
+            tools:layout="@layout/fragment_verify" >
+            <argument
+                android:name="phone"
+                app:argType="string"
+                android:defaultValue=""/>
+        </fragment>
+    </navigation>
+
+
+    <action
+        android:id="@+id/action_to_navMain"
+        app:destination="@id/navMain"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+    <navigation android:id="@+id/navMain"
+        app:startDestination="@id/homeFragment">
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.example.appstore.ui.profile.ProfileFragment"
+            android:label="fragment_profile"
+            tools:layout="@layout/fragment_profile" />
+
+        <action
+            android:id="@+id/action_To_ProfileEditFragment"
+            app:destination="@id/profileEditFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_To_IncreaseWallet"
+            app:destination="@id/increaseWalletFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_To_Comments"
+            app:destination="@id/profileCommentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_To_Favorite"
+            app:destination="@id/profileFavoriteFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+        <action
+            android:id="@+id/action_To_ProfileAddress"
+            app:destination="@id/profileAddressFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_To_ProfileOrders"
+            app:destination="@id/profileOrdersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+
+
+
+        <action
+            android:id="@+id/action_To_categoryDetail"
+            app:destination="@id/navi_category"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+            <argument
+                android:name="slug"
+                app:argType="string" />
+
+
+
+
+        </action>
+        <action
+            android:id="@+id/action_To_Detail"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.example.appstore.ui.home.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" />
+
+
+
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.example.appstore.ui.category.CategoryFragment"
+            android:label="fragment_category"
+            tools:layout="@layout/fragment_category" >
+
+            <action
+                android:id="@+id/action_To_category"
+                app:destination="@id/navi_category"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+                <argument
+                    android:name="slug"
+                    app:argType="string" />
+
+
+
+
+            </action>
+
+
+
+
+
+
+
+
+        </fragment>
+
+
+
+        <fragment
+            android:id="@+id/cartFragment"
+            android:name="com.example.appstore.ui.cart.CartFragment"
+            android:label="fragment_cart"
+            tools:layout="@layout/fragment_cart" />
+
+
+
+
+    </navigation>
+
+
+
+    <action
+        android:id="@+id/action_To_searchFragment"
+        app:destination="@id/nav_search"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    <navigation android:id="@+id/nav_search"
+        app:startDestination="@id/searchFragment">
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.example.appstore.ui.search.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" >
+            <action
+                android:id="@+id/action_searchFragment_to_searchFilterFragment"
+                app:destination="@id/searchFilterFragment" />
+        </fragment>
+
+        <dialog
+            android:id="@+id/searchFilterFragment"
+            android:name="com.example.appstore.ui.search_filter.SearchFilterFragment"
+            android:label="fragment_search_filter"
+            tools:layout="@layout/fragment_search_filter" />
+    </navigation>
+    <navigation android:id="@+id/navi_category"
+        app:startDestination="@id/categoryProductFragment">
+        <dialog
+            android:id="@+id/categoryFilterFragment"
+            android:name="com.example.appstore.ui.category_filter.CategoryFilterFragment"
+            android:label="fragment_category_filter"
+            tools:layout="@layout/fragment_category_filter" />
+        <fragment
+            android:id="@+id/categoryProductFragment"
+            android:name="com.example.appstore.ui.category_product.CategoryProductFragment"
+            android:label="fragment_category_product"
+            tools:layout="@layout/fragment_category_product" >
+            <argument
+                android:name="slug"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_categoryProductFragment_to_categoryFilterFragment"
+                app:destination="@id/categoryFilterFragment" />
+        </fragment>
+    </navigation>
+    <dialog
+        android:id="@+id/profileEditFragment"
+        android:name="com.example.appstore.ui.profile_edit.ProfileEditFragment"
+        android:label="ProfileEditFragment" />
+    <dialog
+        android:id="@+id/increaseWalletFragment"
+        android:name="com.example.appstore.ui.wallet.IncreaseWalletFragment"
+        android:label="IncreaseWalletFragment" />
+    <fragment
+        android:id="@+id/profileCommentFragment"
+        android:name="com.example.appstore.ui.profile_comment.ProfileCommentFragment"
+        android:label="fragment_profile_comment"
+        tools:layout="@layout/fragment_profile_comment" />
+    <fragment
+        android:id="@+id/profileFavoriteFragment"
+        android:name="com.example.appstore.ui.profile_favorite.ProfileFavoriteFragment"
+        android:label="fragment_profile_favorite"
+        tools:layout="@layout/fragment_profile_favorite" />
+    <fragment
+        android:id="@+id/profileAddressFragment"
+        android:name="com.example.appstore.ui.profile_Address.ProfileAddressFragment"
+        android:label="fragment_profile_address"
+        tools:layout="@layout/fragment_profile_address" >
+        <action
+            android:id="@+id/action_profileAddressFragment_to_profileAddressAddOrEditFragment"
+            app:destination="@id/profileAddressAddOrEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileAddressAddOrEditFragment"
+        android:name="com.example.appstore.ui.pro_Address_add_edit.ProfileAddressAddOrEditFragment"
+        android:label="fragment_profile_address_add_or_edit"
+        tools:layout="@layout/fragment_profile_address_add_or_edit" >
+        <argument
+            android:name="data"
+            android:defaultValue="@null"
+            app:argType="com.example.appstore.data.profile_address.ResponseProfileAddresses$ResponseProfileAddressesItem"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileOrdersFragment"
+        android:name="com.example.appstore.ui.profile_orders.ProfileOrdersFragment"
+        android:label="fragment_profile_orders"
+        tools:layout="@layout/fragment_profile_orders" >
+
+        <argument
+            android:name="statusorder"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.appstore.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="productid"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_commentAddFragment"
+            app:destination="@id/commentAddFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/commentAddFragment"
+        android:name="com.example.appstore.ui.detail_comment_add.CommentAddFragment"
+        android:label="fragment_comment_add"
+        tools:layout="@layout/fragment_comment_add" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </dialog>
+
+
+    <action
+        android:id="@+id/actionToShipping"
+        app:destination="@id/shippingFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/shippingFragment"
+        android:name="com.example.appstore.ui.shipping.ShippingFragment"
+        android:label="fragment_shipping"
+        tools:layout="@layout/fragment_shipping" />
+
+
+</navigation>
