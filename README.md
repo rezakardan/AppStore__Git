@@ -27,3 +27,12 @@
 
 
 ![Category Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/categories.png)
+
+
+
+
+![Factore Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/factories.png)
+
+
+
+
