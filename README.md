@@ -20,3 +20,7 @@
 
 
 ![Search Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/searches.png)
+
+
+
+![Filter Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/filters.png)
