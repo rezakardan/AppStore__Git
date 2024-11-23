@@ -15,3 +15,8 @@
 
 
 ![Profile Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/profiles.png)
+
+
+
+
+![Search Image](https://github.com/rezakardan/AppStore__Git/raw/main/AppStore%20images/searches.png)
